@@ -1,0 +1,35 @@
+pipeline{
+    agent any
+    stages{
+        stage("Initialize Terraform"){
+            steps{
+                terraform init
+            }
+        }
+        stage("Terraform plan"){
+            steps{
+                terraform plan
+            }
+        }
+        stage("Confirmation"){
+
+            steps{
+                input 'Proceed to next stage?'
+            }
+        }
+
+        stage("Terraform Build")
+        {
+            steps{
+                terraform build -auto-approve
+            }
+        }
+
+        }
+        
+
+        
+
+        }
+            
+    

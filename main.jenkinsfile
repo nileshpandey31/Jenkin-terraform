@@ -21,7 +21,7 @@ pipeline{
         stage("Terraform Build")
         {
             steps{
-                bat """ terraform apply -auto-approve """
+                bat """ terraform ${Action} -auto-approve """
             }
         }
 

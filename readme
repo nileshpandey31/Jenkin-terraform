@@ -1,0 +1,6 @@
+Simple project to demonstrate triggering terraform build/destroy using jenkin pipeline.
+
+Important Notes :
+1)Download the terraform plugin in jenkins
+2)provide the local terraform path in managejenkins->tools->terraform installation
+3)For me jenkin was installed on local desktop,with aws credential already configured as environmental variable.

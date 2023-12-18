@@ -8,7 +8,7 @@ pipeline{
         }
         stage("Terraform plan"){
             steps{
-                terraform plan
+                bat """ terraform plan """
             }
         }
         stage("Confirmation"){
@@ -21,7 +21,7 @@ pipeline{
         stage("Terraform Build")
         {
             steps{
-                terraform build -auto-approve
+                bat """ terraform build -auto-approve """
             }
         }
 
